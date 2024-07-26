@@ -1,5 +1,6 @@
+import React from 'react';
 import StudentCard from './StudentCard';
-//import './StudentList.css';
+// import './StudentList.css';
 
 function Students({ students }) {
   return (

@@ -46,3 +46,87 @@ code {
 .student-card p {
   color: #555555;
 }
+
+/* HomePage.css */
+
+.homepage {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.homepage h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.homepage p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.homepage form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.homepage form input,
+.homepage form button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.homepage form input:focus,
+.homepage form button:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.homepage form button {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.homepage form button:hover {
+  background-color: #555;
+}
+
+/* Footer.css */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer .social-media {
+  margin-bottom: 10px;
+}
+
+.footer .social-media a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer .social-media a:hover {
+  color: #ddd;
+}
+
+.footer p {
+  margin: 0;
+}
+

@@ -1,4 +1,5 @@
-//import './StudentCard.css';
+import React from 'react';
+// import './StudentCard.css';
 
 function StudentCard({ student }) {
   return (

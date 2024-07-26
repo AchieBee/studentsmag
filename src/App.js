@@ -1,6 +1,10 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Students from './StudentList';
+import Students from './Components/StudentList';
+import HomePage from './Components/HomePage';
+import NavBar from './Components/NavBar';
+import Footer from './Components/Footer';
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -23,7 +27,6 @@ function App() {
     setImage("");
     setPartingShot("");
   }
-  console.log(students);
 
   function changeName(event) {
     setName(event.target.value);
@@ -39,25 +42,25 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={getStudents}>
-        <input
-          placeholder="Add student name"
-          value={name}
-          onChange={changeName}
+      <NavBar />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <HomePage
+              getStudents={getStudents}
+              name={name}
+              changeName={changeName}
+              image={image}
+              changeImage={changeImage}
+              partingShot={partingShot}
+              changePartingShot={changePartingShot}
+            />
+          }
         />
-        <input
-          placeholder="Add student photo link"
-          value={image}
-          onChange={changeImage}
-        />
-        <input
-          placeholder="Add student parting shot"
-          value={partingShot}
-          onChange={changePartingShot}
-        />
-        <button>Submit</button>
-      </form>
-      <Students students={students} />
+        <Route path="/students" element={<Students students={students} />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
